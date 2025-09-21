@@ -1,0 +1,76 @@
+/* General page style */
+body {
+  font-family: Verdana, sans-serif;
+  text-align: center;
+  padding: 20px;
+  background: #eef2f3;
+  color: #222;
+}
+
+/* Section headings */
+h1, h2 {
+  margin-bottom: 8px;
+}
+
+/* ----------------------------
+   Part 1: CSS Transitions
+   ---------------------------- */
+
+/* Button with transition on hover */
+.animated-btn {
+  background: #008CBA; /* light blue */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.animated-btn:hover {
+  transform: scale(1.1);
+  background: #005f73;
+}
+
+/* Pulsing box animation */
+.box {
+  width: 90px;
+  height: 90px;
+  margin: 20px auto;
+  background: #9b5de5;
+  animation: pulse 2.5s infinite;
+}
+
+/* Keyframes for pulsing effect */
+@keyframes pulse {
+  0%   { transform: scale(1); opacity: 1; }
+  50%  { transform: scale(1.2); opacity: 0.5; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* ----------------------------
+   Part 3: CSS + JS Animation
+   ---------------------------- */
+
+/* Circle is idle at first */
+.circle {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  background: #ff595e;
+  border-radius: 50%;
+  transition: transform 1s ease;
+}
+
+/* When .animate class is added, it moves up + rotates */
+.circle.animate {
+  transform: translateY(-120px) rotate(360deg);
+}
+/* Button to trigger the animation */
+.animate-btn {
+  background: #1982c4; /* darker blue */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
